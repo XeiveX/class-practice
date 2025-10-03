@@ -27,9 +27,14 @@ banks = {
 } #i gave the excel folder to Ai and told to put them in dict.
 
 user = input("Put a Random card number : ")
-#user_n = int(user[:6]) #i first tought of making a loop that saves the first 6 numbers of user
+user_n = int(user[:6]) #i first tought of making a loop that saves the first 6 numbers of user
 #but then asked ai if theres a faster way with shorter code and it tought me about " Slicing "
 #which is this : user[:6] . But be aware ! it only works with strings !
-for bank , num in banks.items() :
-    if num in user:
-        print("yes")
+
+def bank_check (n):
+    for bank , num in banks.items() :
+        if n in num :
+            return f"You're bank is {bank} !"
+    return "You're card number is Unknown ."
+
+print(bank_check(user_n))
