@@ -1,6 +1,7 @@
 jadval = []
-
-for i in range (1,11) :
+print("Jadval zarb!")
+user = int(input("from 0 to what ? "))
+for i in range (1,user+1) :
     x= []
     for a in range(1,11):
         c = i * a
